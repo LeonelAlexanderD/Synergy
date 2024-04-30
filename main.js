@@ -9,7 +9,7 @@ const typewriter = new Typewriter(app, {
 });
 
 typewriter
-.typeString('La ciudad de la furia')
-.pauseFor(200)
+.typeString('Veni a conocer el Poncho!')
+.pauseFor(400)
 .start();
 
