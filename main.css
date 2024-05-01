@@ -231,7 +231,7 @@ footer p{
 
 
 /* boton back to top*/
-#myBtn {
+#backtop {
     display: none; 
     position: fixed; /
     bottom: 30px; /* no me toma el primero, me pide una etiqueta bottom*/
@@ -240,15 +240,13 @@ footer p{
     z-index: 99; 
     border: none; 
     outline: none; 
-    /* background-color: red;  */
     color: white; 
     cursor: pointer; 
     padding: 15px; 
-    border-radius: 30px;
-    /* font-size: 18px;  */
+    border-radius: 50px;
   }
   
-  #myBtn:hover {
+  #backtop:hover {
     background-color: #3f3f3f; 
   }
 
