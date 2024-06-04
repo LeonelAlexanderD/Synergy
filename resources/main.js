@@ -13,7 +13,7 @@ typewriter
 .pauseFor(400)
 .start();
 
-/** boton back to top */
+// boton   subir al inicio
 let mybutton = document.getElementById("backtop");
 
 window.onscroll = function() {scrollFunction()};
@@ -27,16 +27,15 @@ function scrollFunction() {
 }
 
 function topFunction() {
-  // document.body.scrollTop = 0; 
   document.documentElement.scrollTop = 0; 
 }
 
+// validacion de form de contacto
 (function () {
   'use strict'
 
   var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
