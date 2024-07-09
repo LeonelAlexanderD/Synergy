@@ -1,6 +1,55 @@
+document.addEventListener('DOMContentLoaded', function() {
 
-/* Frase aparece y desaparece */
+  function cargarModal() {
+    fetch('resources/modal.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar modal.html');
+            }
+            return response.text();
+        })
+        .then(html => {
+            const modalPlaceholder = document.getElementById('modal-placeholder');
+            modalPlaceholder.innerHTML = html;
 
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'resources/modal.css';
+            link.onload = function() {
+                // una vez cargado modal.css, muestra el modal
+                const modal = document.getElementById('myModal');
+                modal.style.display = 'block';
+
+                // configuracion de cierre del modal
+                const closeModal = document.querySelector('.close');
+                if (closeModal) {
+                    closeModal.addEventListener('click', function() {
+                        modal.style.display = 'none';
+                    });
+                } else {
+                    console.error('No se encontró ningún elemento con la clase "close" para cerrar el modal.');
+                }
+
+                // cierre del modal al hacer clic fuera de el(boton cierre x no funciona)
+                window.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            };
+            document.head.appendChild(link);
+        })
+        .catch(error => {
+            console.error('Error al cargar modal.html:', error);
+        });
+}
+
+// Llama a cargarModal() cuando el documento esté completamente cargado
+cargarModal();
+
+
+
+/* Frase ... */
 const app= document.getElementById('typewriter');
 
 const typewriter = new Typewriter(app, {
@@ -13,22 +62,34 @@ typewriter
 .pauseFor(400)
 .start();
 
-// boton   subir al inicio
+
+
+// boton   subir al inicio backtop
+
 let mybutton = document.getElementById("backtop");
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+    scrollFunction();
+};
 
 function scrollFunction() {
-  if ( document.documentElement.scrollTop > 20) { /** document.body.scrollTop > 20 || */
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
 function topFunction() {
-  document.documentElement.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
 }
+
+const topBtn = document.getElementById("backtop");
+
+topBtn.addEventListener('click', function() {
+    topFunction();
+});
+
 
 // validacion de form de contacto
 (function () {
@@ -72,3 +133,8 @@ const fetchWeatherData = () => {
     });
 };
 fetchWeatherData();
+
+
+
+
+})
