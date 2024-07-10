@@ -23,10 +23,24 @@ body{
     font-weight: bold;
 }
 
+#modal-placeholder .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1050; 
+  }
 
 /*  carrosa */
 .carousel-inner {
     max-height: 39rem;
+    z-index: 1040;
 }
 
 /* pantalla ancha*/

@@ -1,20 +1,7 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 
-/* .body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f4f3;
-}  */
 
 #myModal { 
-    display: none; 
+    /* display: none;  */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -194,3 +181,5 @@
     transform: translateX(-100%);
 }
 
+
+/* media querys */

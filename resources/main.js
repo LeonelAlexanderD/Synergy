@@ -165,4 +165,19 @@ fetchWeatherData();
 
 
 
+
+// cambio de vista en login
+const containerUser = document.querySelector(".container");
+const btnSignIn = document.getElementById("btn-sign-in");
+const btnSignUp = document.getElementById("btn-sign-up");
+
+btnSignIn.addEventListener("click",()=>{
+    containerUser.classList.remove("toggle");
+})
+
+btnSignUp.addEventListener("click",()=>{
+    containerUser.classList.add("toggle");
+})
+
+
 })

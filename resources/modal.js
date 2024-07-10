@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
   })()
 
 
-
+// cambio de vista en login
 const containerUser = document.querySelector(".container");
 const btnSignIn = document.getElementById("btn-sign-in");
 const btnSignUp = document.getElementById("btn-sign-up");
@@ -74,6 +74,5 @@ btnSignUp.addEventListener("click",()=>{
 })
 
 
-// validacion de form de contacto
 
 })

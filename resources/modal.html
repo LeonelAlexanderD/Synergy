@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="myModal" class="modalPadre modal">
+    <div id="myModal" class="modalPadre modal" style="display: none;">
             <span class="close">&times;</span>
             <div class="container">
                 <div class="container-form">
@@ -79,6 +79,22 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="modal.js"></script>
+
+
+    <!-- <script>
+        const containerUser = document.querySelector(".container");
+const btnSignIn = document.getElementById("btn-sign-in");
+const btnSignUp = document.getElementById("btn-sign-up");
+
+btnSignIn.addEventListener("click",()=>{
+    containerUser.classList.remove("toggle");
+})
+
+btnSignUp.addEventListener("click",()=>{
+    containerUser.classList.add("toggle");
+})
+
+    </script> -->
 
 </body>
 
