@@ -1,82 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    function cargarModal() {
-        fetch('resources/modal.html')
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Error al cargar modal.html');
-            }
-            return response.text();
-          })
-          .then(html => {
-            const modalPlaceholder = document.getElementById('modal-placeholder');
-            modalPlaceholder.innerHTML = html;
-      
-            // Crear el enlace al archivo CSS
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'resources/modal.css';
-      
-            link.onload = function() {
-              // Solo inicializar el modal después de que el CSS se haya cargado
-              inicializarModal();
-            };
-      
-            // Manejar errores de carga del CSS
-            link.onerror = function() {
-              console.error('Error al cargar modal.css');
-            };
-      
-            document.head.appendChild(link);
-          })
-          .catch(error => {
-            console.error('Error al cargar modal.html:', error);
-          });
-      }
-      
-      function inicializarModal() {
-        function abrirModal() {
-          var modal = document.getElementById('myModal');
-          if (modal) {
-            modal.style.display = 'block';
-          } else {
-            console.error('No se encontró el modal #myModal.');
-          }
-        }
-      
-        var closeModal = document.querySelector('.close');
-        if (closeModal) {
-          closeModal.addEventListener('click', function() {
-            var modal = document.getElementById('myModal');
-            if (modal) {
-              modal.style.display = 'none';
-            } else {
-              console.error('No se encontró el modal #myModal para cerrar.');
-            }
-          });
-        } else {
-          console.error('No se encontró ningún elemento con la clase "close" para cerrar el modal.');
-        }
-      
-        window.addEventListener('click', function(event) {
-          var modal = document.getElementById('myModal');
-          if (modal && event.target === modal) {
-            modal.style.display = 'none';
-          }
-        });
-      
-        const signInUpButton = document.getElementById('sign-in-up');
-        if (signInUpButton) {
-          signInUpButton.addEventListener('click', function() {
-            abrirModal();
-          });
-        } else {
-          console.error('No se encontró el botón #sign-in-up.');
-        }
-      }
-      
-      cargarModal();
-
 /* Frase ... */
 const app= document.getElementById('typewriter');
 
@@ -117,6 +40,7 @@ const topBtn = document.getElementById("backtop");
 topBtn.addEventListener('click', function() {
     topFunction();
 });
+
 
 
 // validacion de form de contacto

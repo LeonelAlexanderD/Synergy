@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- <link rel="stylesheet" href="resources/modal.css"> -->
-     <link rel="stylesheet" href="resources/modal.css">
     <link rel="stylesheet" href="resources/main.css">
     
     <title>Synergy</title>
@@ -49,16 +48,16 @@
               </li>      
 
             </ul>
-            <form class="d-flex">
-              <!-- <input class="form-control me-2" type="email" placeholder="Correo Electronico" aria-label="email"> -->
-              <button id="sign-in-up" class="btn btn-primary btn-primary-outline-success" type="button" >Ingresar</button>
-
+            <form class="d-flex needs-validation" action="" novalidate>              
+              <input type="email" class="form-control me-2" placeholder="Correo Electronico" aria-label="email" required>
+              
+              <div >
+                <button type="submit" class="btn btn-primary w-100 fs-5">Enviar</button>
+              </div>
             </form>
           </div>
         </div>
       </nav>
-
-      <div id="modal-placeholder" ></div>
 
 <!-- 
   =================================
@@ -255,7 +254,6 @@
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
     <script src="resources/main.js"></script>
-    <!-- <script src="resources/modal.js"></script> -->
 
     
   </body>
