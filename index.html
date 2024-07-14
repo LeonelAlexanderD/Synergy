@@ -8,9 +8,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- <link rel="stylesheet" href="resources/modal.css"> -->
     <link rel="stylesheet" href="resources/main.css">
+    
     <title>Synergy</title>
   </head>
+
+
   <body>
     
     <header id="inicio" class="container-fluid bg-primary d-flex justify-content-center">
@@ -20,8 +25,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-3" id="menu">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <span class="text-primary fs-5 fw.bold">Synergy</span>
-        </a>
+            <span class="text-primary fs-3 fw.bold">Synergy</span>
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -43,9 +48,12 @@
               </li>      
 
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="email" placeholder="Correo Electronico" aria-label="email">
-              <button class="btn btn-primary btn-primary-outline-success" type="button">Suscribete!</button>
+            <form class="d-flex needs-validation" action="" novalidate>              
+              <input type="email" class="form-control me-2" placeholder="Correo Electronico" aria-label="email" required>
+              
+              <div >
+                <button type="submit" class="btn btn-primary w-100 fs-5">Enviar</button>
+              </div>
             </form>
           </div>
         </div>
@@ -97,7 +105,7 @@
 
 <!-- 
   =================================
-    Introduccion
+    servicios
   ===============================
 -->
 
@@ -246,6 +254,8 @@
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
     <script src="resources/main.js"></script>
+
     
   </body>
 </html>
+

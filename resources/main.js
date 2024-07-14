@@ -1,6 +1,6 @@
+document.addEventListener('DOMContentLoaded', function() {
 
-/* Frase aparece y desaparece */
-
+/* Frase ... */
 const app= document.getElementById('typewriter');
 
 const typewriter = new Typewriter(app, {
@@ -13,22 +13,35 @@ typewriter
 .pauseFor(400)
 .start();
 
-// boton   subir al inicio
+
+
+// boton   subir al inicio backtop
+
 let mybutton = document.getElementById("backtop");
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+    scrollFunction();
+};
 
 function scrollFunction() {
-  if ( document.documentElement.scrollTop > 20) { /** document.body.scrollTop > 20 || */
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
 function topFunction() {
-  document.documentElement.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
 }
+
+const topBtn = document.getElementById("backtop");
+
+topBtn.addEventListener('click', function() {
+    topFunction();
+});
+
+
 
 // validacion de form de contacto
 (function () {
@@ -72,3 +85,23 @@ const fetchWeatherData = () => {
     });
 };
 fetchWeatherData();
+
+
+
+
+
+// cambio de vista en login
+const containerUser = document.querySelector(".container");
+const btnSignIn = document.getElementById("btn-sign-in");
+const btnSignUp = document.getElementById("btn-sign-up");
+
+btnSignIn.addEventListener("click",()=>{
+    containerUser.classList.remove("toggle");
+})
+
+btnSignUp.addEventListener("click",()=>{
+    containerUser.classList.add("toggle");
+})
+
+
+})
