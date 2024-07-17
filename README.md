@@ -1,2 +1,0 @@
-# Synergy
-Prototipo para synergy

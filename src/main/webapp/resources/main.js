@@ -105,3 +105,38 @@ btnSignUp.addEventListener("click",()=>{
 
 
 })
+
+
+
+//captura de form
+const form = document.querySelector("#contenedor-formulario");
+form.addEventListener("submit", async (event)=>{
+  event.preventDefault();
+
+  const emailIngresado = event.target.email.value;
+  const nombreIngresado = event.target.nombre.value;
+  const telefonoIngresado = event.target.telefono.value;
+
+  const url = "http://localhost:8080/contacto"
+
+  const contactoData = {
+    email: emailIngresado,
+    nombre: nombreIngresado,
+    telefono: telefonoIngresado
+  }
+
+  const response = await fetch(url, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(contactoData)
+  });
+
+  if(response.ok){
+    console.log("Mensaje enviado")
+  }else{
+    console.error("No se puedo enviar el mensaje")
+  }
+
+})
